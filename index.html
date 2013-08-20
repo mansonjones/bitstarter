@@ -97,6 +97,11 @@
     .footer a {
       color: #ccccff;
     }
+    /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+    div.addthis_toolbox {
+      width:180px;
+      margin: 0 auto;
+     }
   </style>
  </head>
 <body>
@@ -133,14 +138,14 @@
   <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
   <div class="row-fluid heading">
     <div class="span12">
-      <h1>Product: Development Version</h1>
+      <h1>NodeFlow</h1>
     </div>
   </div>
   <div class="row-fluid subheading">
     <div class="span12">
       <!-- Special typography from Bootstrap for lead paragraph. -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-      <p class="lead">Potluck Planner.</p>
+      <p class="lead">A node.js package for general graph-based computation.</p>
     </div>
   </div>
   <div class="row-fluid pitch">
@@ -192,10 +197,16 @@
     </div>
     <div class="row-fluid">
     <div class="span8 offset2 social">
-      <!-- Social buttons are not included in default Bootstrap. -->
-      <!-- See: http://noizwaves.github.i/bootstrap-social-buttons -->
-      <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-      <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+       <a class="addthis_button_preferred_1"></a>
+       <a class="addthis_button_preferred_2"></a>
+       <a class="addthis_button_compact"></a>
+       <a class="addthis_counter addthis_bubble_style"></a>
+      </div>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520dc9d03a3c9d8e"></script>
+     <!-- AddThis Button END -->
     </div>
     </div>
   </div>
@@ -211,36 +222,34 @@
   </div>
   <div class="span5 copy">
     <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            NodeFlow is a node.js package that lets users create visual 
+            computation graphs to model sequential computations.  For example,
+            rather than perform a series of image-processing commands using
+            a command-line tool, you would use NodeFlow to create a node graph
+            in an HTML5 Canvas that corresponds to the image-processing calculations.
+            The computations would take place in the cloud, and the image would be
+            streamed back to a viewer in the client app.  Or, a user could 
+            perform a series of command-line bioinformatic calculations by 
+            modeling the operations using NodeFlow, and display the resulting
+            phylogeny tree in a custom viewer. 
     </p>
   </div>
 </div>
 
 <div class="row-fluid section2">
   <div class="span5 offset1 copy copy-right">
-    <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-    </p>
+            <h4> Version 1 Features: </h4>
+            <ol> 
+             <li> Integration with OpenCV. </li>
+             <li> Automatic lookup of GUI parameter types and default values. </li>
+            </ol>
+            <h4> Version 2 Features: </h4>
+             <ol> 
+              <li> Support for region of interest.</li>
+              <li> IOS App & Android client. </li>
+              <li> Ability to specify a separate device for viewing the result, so that a user 
+              could, say, create computation graphs on an IPAD and view the results on a smart TV. </li>
+            </ol>
   </div>
   <div class="span5 asset">
     <img class="img-polaroid" alt="Placeholder" src="http://placehold.it/480x300".
@@ -296,6 +305,18 @@
       put at the bottom of the page.</p>
    </div>   
  </div>   
-</div> 
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43253806-1', 'herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+ 
 </body>
 </html>
